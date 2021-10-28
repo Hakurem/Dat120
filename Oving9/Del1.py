@@ -12,10 +12,10 @@ class Flervalg:
           output += f"\n{i}. {v}"
       return output
     
-    def getanswer(self):
+    def getanswer(self): #Oppgave e sjekk korrekt svar
         return self.answers[int(self.correct)]
         
-    def checkans(self,ans): #Oppgave e sjekk korrekt svar
+    def checkans(self,ans): 
         return ans == self.correct 
         
         
@@ -29,7 +29,7 @@ class Flervalg:
             while True:
                 try:
                     ans = int(input(f"Select a choice {name}: "))
-                    if ans >= 0 and ans <= len(self.answers):
+                    if ans >= 0 and ans <= len(self.answers)-1:
                         break
                     else:
                         print('Your option is not valid')
